@@ -19,6 +19,6 @@ class DatabaseSeeder extends Seeder
         $admins->name = "admin";
         $admins->save();
 
-        // $this->call(UsersTableSeeder::class);
+        $this->call(SettingDatabaseSeeder::class);
     }
 }
