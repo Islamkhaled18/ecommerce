@@ -25,6 +25,7 @@ Route::group(
 
 
             Route::get('/','DashboardController@index')->name('admin.dashboard'); // the first page admin visits after login
+            Route::get('logout','LoginController@logout')->name('admin.logout');
 
             Route::group(['prefix'=>'settings'], function (){
                 

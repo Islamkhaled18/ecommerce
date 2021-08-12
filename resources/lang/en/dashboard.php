@@ -36,6 +36,7 @@ return [
     'name'=>'Name',
     'back'=>'Back',
     'save'=>'Save',
+    'logout'=>'Logout',
 
 
 ];
