@@ -43,7 +43,36 @@ return [
     'email'=>'Email',
     'password'=>'Password',
     'new_password'=>'New Password',
-    'password_confirmation'=>'Password Confirmation'
+    'password_confirmation'=>'Password Confirmation',
+    'main_categories'=>'Main Categories',
+    'all_main_categories'=>'All Main Categories',
+    'slug'=>'Slug',
+    'image'=>'Image',
+    'actions'=>'Action',
+    'edit'=>'Edit',
+    'delete'=>'Delete',
+    'active'=>'Active',
+    'notactive'=>'Not Active',
+    'categorynotfound'=>'This Category not found',
+    'edit_main_categories'=>'Edit Main Categories',
+    'details'=>'Details',
+    'updated_successfully'=>'Updated Successfully',
+    'error'=>'Error',
+    'update'=>'update',
+    'deleted_successfully'=>'Deleted Successfully',
+    'add_new_category'=>'Add New Category',
+    'created_successfully'=>'Created Successfully',
+    'save'=>'Save',
+    'sub_categories'=>'Sub Categories',
+    'sub_categories'=>'Sub Category',
+    'all_sub_categories'=>'All Sub Categories',
+    'add_new_sub_category'=>'Add New Sub Category',
+    'choose_category'=>'Choose Category',
+    'edit_sub_category'=>'Edit Sub Category',
+    'add_successfully'=>'Added Successfully',
+
+
+
 
 
 
