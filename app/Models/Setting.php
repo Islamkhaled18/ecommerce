@@ -3,10 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 
-
-class Setting extends Model
+class Setting extends Model implements TranslatableContract
 {
     use Translatable;
 
@@ -14,7 +14,7 @@ class Setting extends Model
 
     protected $translatedAttributes = ['value'];
 
-    protected $fillable = ['key', 'is_translatable', 'plain_value'];
+    protected $guarded = [];
   
     protected $casts = [
         'is_translatable' => 'boolean',

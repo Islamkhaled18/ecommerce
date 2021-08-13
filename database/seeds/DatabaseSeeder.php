@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $admins->save();
 
         $this->call(SettingDatabaseSeeder::class);
+        $this->call(CategoryDatabaseSeeder::class);
+
     }
 }

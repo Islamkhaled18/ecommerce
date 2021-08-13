@@ -30,19 +30,44 @@
                 <ul class="nav navbar-nav float-right">
                     <li class="dropdown dropdown-user nav-item">
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                <span class="mr-1">مرجبا
-                  <span
-                      class="user-name text-bold-700">{{ auth('admin')->user()->name }}</span>
-                </span>
-                            <span class="avatar avatar-online">
-                  <img  style="height: 35px;" src="" alt="avatar"><i></i></span>
+                            <span class="mr-1">{{ trans('dashboard.welcome') }}
+                                <span class="user-name text-bold-700">{{ auth('admin')->user()->name }}</span>
+                            </span>
+                            
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href=""><i
-                                    class="ft-user"></i> تعديل الملف الشحصي </a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{ route('edit.profile') }}"><i
+                                    class="ft-user"></i>{{trans('dashboard.edit_profile')}}</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('admin.logout') }}"><i class="ft-power"></i>{{ trans('dashboard.logout') }}</a>  
                         </div>
                     </li>
+
+
+
+
+                    <li class="dropdown dropdown-user nav-item">
+                        <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                            <span class="mr-1">
+                                <span
+                                    class="user-name text-bold-700">  {{App::getLocale()}}</span>
+                            </span>
+
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                            @endforeach
+                        </div>
+                    </li>
+
+
 
                     <li class="dropdown dropdown-notification nav-item">
                         <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>

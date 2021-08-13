@@ -37,6 +37,14 @@ return [
     'back'=>'Back',
     'save'=>'Save',
     'logout'=>'Logout',
+    'languages'=>'Languages',
+    'welcome'=>'Welcome',
+    'edit_profile'=>'Edit Profile',
+    'email'=>'Email',
+    'password'=>'Password',
+    'new_password'=>'New Password',
+    'password_confirmation'=>'Password Confirmation'
+
 
 
 ];

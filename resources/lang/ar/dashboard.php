@@ -37,6 +37,17 @@ return [
     'back'=>'تراجع',
     'save'=>'حفظ',
     'logout'=>'تسجيل خروج',
+    'languages'=>'اللغات',
+    'welcome'=>'مرحبا',
+    'edit_profile'=>'تعديل الملف الشخصي',
+    'email'=>'البريد الاكتروني',
+    'password'=>'الرقم السري',
+    'new_password'=>'الرقم السري الجديد',
+    'password_confirmation'=>'تأكيد الرقم السري',
+
+
+
+
 
 
 
