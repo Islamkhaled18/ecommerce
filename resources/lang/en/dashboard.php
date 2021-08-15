@@ -70,6 +70,22 @@ return [
     'choose_category'=>'Choose Category',
     'edit_sub_category'=>'Edit Sub Category',
     'add_successfully'=>'Added Successfully',
+    'main_category'=>'Main Category',
+    'brands'=>'Brands',
+    'brand'=>'Brand',
+    'add_new_brand'=>'Add New Brand',
+    'edit_brands'=>'Edit Brands',
+    'edit_brand'=>'Edit Brand',
+    'all_brands'=>'All Brands',
+    'tags'=>'Tags',
+    'tag'=>'Tag',
+    'add_new_tags'=>'Add New Tags',
+    'edit_tag'=>'Edit Tag',
+    'all_tags'=>'All Tags',
+    'main_category'=>'Main Category',
+    'sub_category'=>'Sub Category',
+    'choose_category'=> 'Choose Category',
+    'category'=>'Category',
 
 
 

@@ -25,33 +25,16 @@ class SubCategoriesController extends Controller
     public function store(SubCategoryRequest $request)
     {
 
-        try {
+        //validation
+        $request_data = $request->except(['is_active']);
+        $request_data['is_active'] = $request->has('is_active');
+        $category = Category::create($request_data);
 
-            DB::beginTransaction();
+        //save translations
+        $category->name = $request->name;
+        $category->save();
 
-            //validation
-
-            if (!$request->has('is_active'))
-                $request->request->add(['is_active' => 0]);
-            else
-                $request->request->add(['is_active' => 1]);
-
-            $category = Category::create($request->except('_token'));
-
-            //save translations
-            $category->name = $request->name;
-            $category->save();
-
-            return redirect()->route('admin.subcategories')->with(['error' => __('dashboard.eradd_successfullyror')]);
-            DB::commit();
-
-        } catch (\Exception $ex) {
-            DB::rollback();
-            return redirect()->route('admin.subcategories')->with(['error' => __('dashboard.error')]);
-        }
-
-
-
+        return redirect()->route('admin.subcategories')->with(['error' => __('dashboard.add_successfully')]);
     }
 
     public function edit($id)
