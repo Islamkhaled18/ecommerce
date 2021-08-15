@@ -48,6 +48,7 @@
                                             <thead class="">
                                             <tr>
                                                 <th>{{ trans('dashboard.name') }} </th>
+                                                <th>{{ trans('dashboard.main_category') }} </th>
                                                 <th>{{ trans('dashboard.slug') }}</th>
                                                 <th>{{ trans('dashboard.status') }}</th>
                                                 <th>{{ trans('dashboard.image') }}</th>
@@ -60,6 +61,7 @@
                                                 @foreach($categories as $category)
                                                     <tr>
                                                         <td>{{$category ->name}}</td>
+                                                        <td>{{$category ->_parent ->name ?? '--'}}</td>
                                                         <td>{{$category ->slug}}</td>
                                                         <td>{{$category ->getActive()}}</td>
                                                         <td> <img style="width: 150px; height: 100px;" src=" "></td>

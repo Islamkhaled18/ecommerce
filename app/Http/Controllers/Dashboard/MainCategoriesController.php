@@ -13,7 +13,7 @@ class MainCategoriesController extends Controller
 {
     public function index()
     {
-        $categories = Category::parent()->orderBy('id','DESC') -> paginate(PAGINATION_COUNT);
+        $categories = Category::with('_parent')->orderBy('id','DESC') -> paginate(PAGINATION_COUNT);
 
         return view('dashboard.categories.index',compact('categories'));
 
@@ -21,38 +21,29 @@ class MainCategoriesController extends Controller
 
     public function create()
     {
-        return view('dashboard.categories.create');
+        $categories = Category::select('id','parent_id')->get();
+        return view('dashboard.categories.create' , compact('categories'));
 
     }//end of create
 
     public function store(MainCategoryRequest $request)
     {
-
-        try {
-
-            DB::beginTransaction();
-
+  
             //validation
 
-            if (!$request->has('is_active'))
-                $request->request->add(['is_active' => 0]);
-            else
-                $request->request->add(['is_active' => 1]);
+            if ($request -> type == 1){
+                $request->except('parent_id');
+            }
 
-            $category = Category::create($request->except('_token'));
-
-            //save 
+            $request_data = $request->except(['is_active']);
+            $request_data['is_active'] = $request->has('is_active');
+            
+            $category = Category::create($request_data);
             $category->name = $request->name;
             $category->save();
 
             return redirect()->route('admin.maincategories')->with(['success' => __('dashboard.created_successfully')]);
-            DB::commit();
-
-        } catch (\Exception $ex) {
-            DB::rollback();
-            return redirect()->route('admin.maincategories')->with(['error' => __('dashboard.error')]);
-        }
-
+        
     }
 
 

@@ -45,6 +45,7 @@ return [
     'new_password'=>'الرقم السري الجديد',
     'password_confirmation'=>'تأكيد الرقم السري',
     'main_categories'=>'الإقسام الرئيسية',
+    'main_category'=>'القسم الرئيسي',
     'all_main_categories'=>'كل الاقسام الرئيسية',
     'slug'=>'الاسم بالرابط',
     'image'=>'صورة',
@@ -70,11 +71,21 @@ return [
     'choose_category'=>'اختار القسم',
     'edit_sub_category'=>'تعديل قسم فرعي',
     'add_successfully'=>'تمت الاضافه بنجاح',
-
-
-
-
-
+    'brands'=>'الماركات',
+    'brand'=>'الماركه',
+    'add_new_brand'=>'اضافة ماركه جديده',
+    'edit_brands'=>'تعديل ماركات',
+    'edit_brand'=>'تعديل ماركه',
+    'all_brands'=>'كل الماركات',
+    'tags'=>'العلامات',
+    'tag'=>'العلامه',
+    'add_new_tags'=>'اضافة علامات جديدة',
+    'edit_tag'=>'تعديل علامه',
+    'all_tags'=>'كل العلامات',
+    'main_category'=>'قسم رئيسي',
+    'sub_category'=>'قسم فرعي',
+    'choose_category'=> 'اختر القسم',
+    'category'=>'القسم',
 
 
 ];

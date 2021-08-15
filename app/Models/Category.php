@@ -58,7 +58,11 @@ class Category extends Model
     public function scopeChild($query){
 
         return $query->whereNotNull('parent_id');
+    }
 
+    public function _parent(){
+
+        return $this->belongsto(self::class , 'parent_id');
     }
 
 
