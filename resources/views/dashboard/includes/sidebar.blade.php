@@ -40,7 +40,7 @@
               </ul>
             </li>
 
-            <li class="nav-item"><a href="{{ route('admin.subcategories') }}"><i class="la la-group"></i>
+            {{-- <li class="nav-item"><a href="{{ route('admin.subcategories') }}"><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">{{ trans('dashboard.sub_categories') }}</span>
                     <span
                         class="badge badge badge-danger badge-pill float-right mr-2">{{ \App\Models\category::child() ->count() }}</span>
@@ -52,7 +52,7 @@
                     <li><a class="menu-item" href="{{route('admin.subcategories.create')}}" data-i18n="nav.dash.crypto">{{ trans('dashboard.add_new_sub_category') }}</a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
             <li class="nav-item">
                      <a href=""><i class="la la-group"></i>
                             <span class="menu-title" data-i18n="nav.dash.main">{{ trans('dashboard.brands') }}</span>
@@ -83,6 +83,23 @@
                             <li>
                                    <a class="menu-item" href="{{ route('admin.tags.create') }}" 
                                    data-i18n="nav.dash.crypto">{{ trans('dashboard.add_new_tags') }}</a>
+                            </li>
+                     </ul>
+              </li>
+
+              <li class="nav-item">
+                     <a href=""><i class="la la-group"></i>
+                            <span class="menu-title" data-i18n="nav.dash.main">{{ trans('dashboard.products') }}</span>
+                            <span class="badge badge badge-danger badge-pill float-right mr-2"></span>
+                     </a>
+                     <ul class="menu-content">
+                            <li class="active">
+                                   <a class="menu-item" href="{{ route('admin.products') }}"
+                                          data-i18n="nav.dash.ecommerce">{{ trans('dashboard.all_products') }}</a>
+                            </li>
+                            <li>
+                                   <a class="menu-item" href="{{ route('admin.products.general.create') }}" 
+                                   data-i18n="nav.dash.crypto">{{ trans('dashboard.add_new_product') }}</a>
                             </li>
                      </ul>
               </li>

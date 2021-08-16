@@ -86,6 +86,16 @@ return [
     'sub_category'=>'قسم فرعي',
     'choose_category'=> 'اختر القسم',
     'category'=>'القسم',
+    'products'=>'المنتجات',
+    'product'=>'المنتج',
+    'all_products'=>'كل المنتجات',
+    'add_new_product'=> 'إضافة منتج جديد',
+    'Edit_product'=>'تعديل منتج',
+    'product_detilas'=>'وصف المنتج',
+    'short_product_detilas'=>'وصف مختصر للمنتج',
+    'choose_tags'=>'اختر العلامات الدلاليه',
+    'choose_brand'=>'اختار الماركه التجاريهP',
+
 
 
 ];

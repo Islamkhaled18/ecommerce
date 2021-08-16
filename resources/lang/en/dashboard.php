@@ -86,6 +86,16 @@ return [
     'sub_category'=>'Sub Category',
     'choose_category'=> 'Choose Category',
     'category'=>'Category',
+    'products'=>'Products',
+    'product'=>'Product',
+    'all_products'=>'All Products',
+    'add_new_product'=> 'Add New Product',
+    'Edit_product'=>'Edit Product',
+    'product_detilas'=>'Product Details',
+    'short_product_detilas'=>'Short details of product',
+    'choose_tags'=>'Choose Tags',
+    'choose_brand'=>'Choose Brand',
+
 
 
 
