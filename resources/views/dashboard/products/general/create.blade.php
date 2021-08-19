@@ -165,7 +165,7 @@
                                                                     @if($brands && $brands -> count() > 0)
                                                                         @foreach($brands as $brand)
                                                                             <option
-                                                                                value="{{$brand -> id }}">{{$brand -> name}}</option>
+                                                                                value="{{$brand -> id }}">{{$brand ->name}}</option>
                                                                         @endforeach
                                                                     @endif
                                                                 </optgroup>

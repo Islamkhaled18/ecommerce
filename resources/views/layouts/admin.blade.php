@@ -119,6 +119,8 @@
 <script src="{{asset('assets/admin/js/scripts/tables/datatables/datatable-basic.js')}}"
         type="text/javascript"></script>
 <script src="{{asset('assets/admin/js/scripts/extensions/date-time-dropper.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/admin/vendors/js/extensions/dropzone.min.js')}}" type="text/javascript"></script>
+
 <!-- END PAGE LEVEL JS-->
 
 <script src="{{asset('assets/admin/js/scripts/forms/checkbox-radio.js')}}" type="text/javascript"></script>
