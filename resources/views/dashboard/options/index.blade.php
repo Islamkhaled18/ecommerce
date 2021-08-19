@@ -1,17 +1,17 @@
 @extends('layouts.admin')
-@section('content')
 
+@section('content')
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h3 class="content-header-title">{{ trans('dashboard.products') }} </h3>
+                    <h3 class="content-header-title"> {{ trans('dashboard.product_attributes_otions') }} </h3>
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{ trans('dashboard.dashboard') }} </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{ trans('dashboard.dashboard') }}</a>
                                 </li>
-                                <li class="breadcrumb-item active">  {{ trans('dashboard.products') }}
+                                <li class="breadcrumb-item active">{{ trans('dashboard.product_attributes_otions') }}
                                 </li>
                             </ol>
                         </div>
@@ -25,7 +25,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">{{ trans('dashboard.all_products') }} </h4>
+                                    <h4 class="card-title">{{ trans('dashboard.product_attributes_otions') }}</h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -47,38 +47,36 @@
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
-                                                <th>{{ trans('dashboard.name') }}  </th>
-                                                <th> {{ trans('dashboard.slug') }}  </th>
-                                                <th>{{ trans('dashboard.status') }} </th>
-                                                <th>{{ trans('dashboard.price') }} </th>
-                                                <th>{{ trans('dashboard.actions') }} </th>
+                                                <th>{{ trans('dashboard.name') }}</th>
+                                                <th>{{ trans('dashboard.price') }}</th>
+                                                <th>{{ trans('dashboard.product') }}</th>
+                                                <th>{{ trans('dashboard.attributes') }}</th>
+                                                <th>{{ trans('dashboard.actions') }}</th>
                                             </tr>
                                             </thead>
                                             <tbody>
 
-                                            @isset($products)
-                                                @foreach($products as $product)
+                                            @isset($options)
+                                                @foreach($options as $option)
                                                     <tr>
-                                                        <td>{{$product ->name}}</td>
-                                                         <td>{{$product ->slug}}</td>
-                                                        <td>{{$product ->getActive()}}</td>
-                                                        <td>{{$product ->price}}</td>
+                                                        <td>{{$option ->name}}</td>
+                                                        <td>{{$option ->price}}</td>
+                                                        <td>{{$option ->product->name}}</td>
+                                                        <td>{{$option ->attribute->name}}</td>
                                                         <td>
                                                             <div class="btn-group" role="group"
-                                                                 aria-label="Basic example">
-                                                                <a href="{{route('admin.products.price',$product -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{ trans('dashboard.price') }}</a>
-
-                                                                <a href="{{route('admin.products.images',$product -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{ trans('dashboard.product_images') }}</a>
-
-                                                                <a href="{{route('admin.products.stock',$product -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{ trans('dashboard.stock') }}</a> 
+                                                                aria-label="Basic example">
+                                                                <a href="{{route('admin.options.edit',$option -> id)}}"
+                                                                class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{ trans('dashboard.edit') }}</a>
+                                                                <a href=""
+                                                                class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">{{ trans('dashboard.delete') }}</a>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                 @endforeach
                                             @endisset
+
+
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
@@ -89,10 +87,8 @@
                             </div>
                         </div>
                     </div>
-                    {!! $products -> links() !!}
                 </section>
             </div>
         </div>
     </div>
-
-    @stop
+@stop

@@ -101,6 +101,23 @@
                                    <a class="menu-item" href="{{ route('admin.products.general.create') }}" 
                                    data-i18n="nav.dash.crypto">{{ trans('dashboard.add_new_product') }}</a>
                             </li>
+                            <li>
+                                   <a class="menu-item" href="{{ route('admin.attributes') }}" 
+                                   data-i18n="nav.dash.crypto">{{ trans('dashboard.product_attributes') }}</a>
+                            </li>
+                            <li>
+                                   <a class="menu-item" href="{{ route('admin.attributes.create') }}" 
+                                   data-i18n="nav.dash.crypto">{{ trans('dashboard.add_new_attributes') }}</a>
+                            </li>
+
+                            <li>
+                                   <a class="menu-item" href="{{ route('admin.options') }}" 
+                                   data-i18n="nav.dash.crypto">{{ trans('dashboard.product_attributes_otions') }}</a>
+                            </li>
+                            <li>
+                                   <a class="menu-item" href="{{ route('admin.options.create') }}" 
+                                   data-i18n="nav.dash.crypto">{{ trans('dashboard.add_new_attributes_options') }}</a>
+                            </li>
                      </ul>
               </li>
 
