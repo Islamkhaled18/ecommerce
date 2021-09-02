@@ -8,6 +8,7 @@ use App\Models\Brand;
 use App\Models\Tag;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Image;
 use App\Http\Requests\ProductPriceValidation;
 use App\Http\Requests\ProductStockRequest;
 use App\Http\Requests\ProductImagesRequest;
@@ -102,20 +103,16 @@ class ProductsController extends Controller
 
     public function saveProductStock(ProductStockRequest $request){
 
-        try{
-
-            Product::whereId($request->product_id)->update($request -> except([
+        
+            Product::whereId($request->product_id)->update($request ->except([
                 '_token','product_id'
             ]));
 
             return redirect()->route('admin.products')->with(['success' =>__('dashboard.add_successfully')]);
 
         
-        }
-        catch(\Exception $ex){
-
-            return redirect()->route('admin.products')->with(['error'=>__('dashboard.error')]);
-        }
+        
+        
     }
 
  
@@ -137,6 +134,7 @@ class ProductsController extends Controller
     }
 
     public function saveProductImagesDB(ProductImagesRequest $request){
+
         try {
             // save dropzone images
             if ($request->has('document') && count($request->document) > 0) {
@@ -148,13 +146,10 @@ class ProductsController extends Controller
                 }
             }
 
-            return redirect()->route('admin.products')->with(['success' =>__('dashboard.add_successfully')]);
+            return redirect()->route('admin.products')->with(['success' => __('dashboard.add_successfully')]);
 
         }catch(\Exception $ex){
 
-            return redirect()->route('admin.products')->with(['error'=>__('dashboard.error')]);
-
         }
     }
-
 }

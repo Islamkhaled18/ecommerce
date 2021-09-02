@@ -131,6 +131,22 @@ return [
     'choose_option'=>'اختار خاصيه',
     'Update_option'=>'تعديل الخاصية',
     'choose_product'=>'اختر منتج',
+    'slider'=>' السلايدر',
+    'slider_image'=>' صورة السلايدر',
+    'categories'=>'الاقسام',
+    'current_images'=> 'الصور الحالية',
+    'no_images'=>'لا يوجد صور',
+    'products_manage'=> 'ادارة المنتجات' ,
+        'tags_manage'=>'ادارة العلامات',
+        'categories_manage'=>'ادارة الاقسام' ,
+        'brands_manage'=>' ادارة الماركات' ,
+        'options_manage'=>'ادارة اختيارات المنتج', 
+        'permissions'=>'الصلاحيات',
+        'permission'=>'صلاحيه',
+        'add_new_permission'=>'اضافة صلاحيه جديده',
+        'edit_permissions'=>' تعديل صلاحيه',
+
+
 
 
 

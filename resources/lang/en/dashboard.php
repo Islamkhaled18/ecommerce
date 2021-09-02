@@ -131,6 +131,21 @@ return [
     'choose_option'=>'Choose Option',
     'Update_option'=>'Update Option',
     'choose_product'=>'Choose Product',
+    'slider_image'=>'Slider Image',
+    'slider'=>'Slider',
+    'current_images'=> 'Current Images',
+    'no_images'=>'No Images',
+    'categories'=>'Categories',
+    'products_manage'=> 'Products manage' ,
+        'tags_manage'=>' Tags manage ',
+        'categories_manage'=>' Categories manage' ,
+        'brands_manage'=>' Brands manage' ,
+        'options_manage'=>'Options manage', 
+        'permissions'=>'Permissions',
+        'permission'=>'Permission',
+        'add_new_permission'=>'Add new permission',
+        'edit_permissions'=>'Edit Permission',
+
 
 
 

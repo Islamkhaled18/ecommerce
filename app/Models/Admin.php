@@ -14,4 +14,10 @@ class Admin extends Authenticatable
     protected $guarded=[];
     public $timestamps = true;
 
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
+
 }

@@ -138,6 +138,27 @@ Route::group(
                 });
                 /////////////////////////////////  end options     /////////////////////////////////////////////
 
+                /////////////////////////////////  begin sliders     /////////////////////////////////////////////
+                Route::group (['prefix'=>'sliders'], function()
+                {
+                    Route::get('/'           , 'SliderController@addImages')->name('admin.sliders.create');
+                    Route::post('images', 'SliderController@saveSliderImages')->name('admin.sliders.images.store');
+                    Route::post('images/db', 'SliderController@saveSliderImagesDB')->name('admin.sliders.images.store.db');
+
+                });
+                /////////////////////////////////  end sliders     /////////////////////////////////////////////
+
+                
+                ################################## roles ######################################
+                Route::group(['prefix' => 'roles'], function () {
+                    Route::get('/', 'RolesController@index')->name('admin.roles.index');
+                    Route::get('create', 'RolesController@create')->name('admin.roles.create');
+                    Route::post('store', 'RolesController@store')->name('admin.roles.store');
+                    Route::get('/edit/{id}', 'RolesController@edit') ->name('admin.roles.edit') ;
+                    Route::post('update/{id}', 'RolesController@update')->name('admin.roles.update');
+                });
+                ################################## end roles ######################################
+
 
         });
 

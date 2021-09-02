@@ -32,7 +32,9 @@ class MainCategoriesController extends Controller
             //validation
 
             if ($request -> type == 1){
+
                 $request->except('parent_id');
+                
             }
 
             $request_data = $request->except(['is_active']);

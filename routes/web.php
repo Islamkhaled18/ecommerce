@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('testlayout', function () {
     return view('layouts.admin');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
