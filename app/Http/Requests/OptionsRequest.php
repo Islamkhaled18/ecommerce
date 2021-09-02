@@ -26,7 +26,7 @@ class OptionsRequest extends FormRequest
         return [
             'name'=>'required|max:100',
             'price'=>'required|numeric|min:0',
-            'product_id'=>'required|exists:products,id',
+            // 'product_id'=>'required|exists:products,id',
             'attribute_id'=>'required|exists:attributes,id'
 
         ];

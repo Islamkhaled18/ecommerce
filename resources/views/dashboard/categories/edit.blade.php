@@ -8,11 +8,11 @@
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{ trans('dshboard.dashboard') }} </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{ trans('dashboard.dashboard') }} </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="{{route('admin.maincategories')}}">{{ trans('dshboard.main_categories') }} </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.maincategories')}}">{{ trans('dashboard.main_categories') }} </a>
                                 </li>
-                                <li class="breadcrumb-item active"> {{trans('dashboard.edit')}} - {{$category -> name}}
+                                <li class="breadcrumb-item active"> {{trans('dashboard.edit')}} - {{$category ->name}}
                                 </li>
                             </ol>
                         </div>

@@ -103,7 +103,7 @@
                                                                 </optgroup>
                                                             </select>
                                                             @error('product_id')
-                                                            <span class="text-danger"> {{$message}}</span>
+                                                            <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>

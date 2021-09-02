@@ -29,15 +29,19 @@ class OptionsController extends Controller
     }
 
     public function create(){
-        $data = [];
-        $data['products'] = Product::active()->select('id')->get();
-        $data['attributes'] = Attribute::select('id')->get();
+        
+        $products = Product::where('is_active',0)->select('id')->get();
+        // dd($products);
+        $attributes = Attribute::select('id')->get();
 
-        return view('dashboard.options.create', $data);
+        return view('dashboard.options.create',compact('products','attributes'));
     }
 
     public function store(OptionsRequest $request)
     {
+
+       return $request ;
+
         $option = Option::create([
             'price'=>$request->price,
             'product_id'=>$request->product_id,

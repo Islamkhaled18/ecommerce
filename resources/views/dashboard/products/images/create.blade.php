@@ -89,6 +89,8 @@
 @stop
 
 @section('script')
+
+
     <script>
              var uploadedDocumentMap = {}
             Dropzone.options.dpzMultipleFiles = {
@@ -98,12 +100,12 @@
                 clickable: true,
                 addRemoveLinks: true,
                 acceptedFiles: 'image/*',
-                dictFallbackMessage:  "__('dashboard.dictFallbackMessage')",
-                dictInvalidFileType: "__('dashboard.dictInvalidFileType')",
-                dictCancelUpload: "__('dashboard.dictCancelUpload')",
-                dictCancelUploadConfirmation: "__('dashboard.dictCancelUploadConfirmation')",
-                dictRemoveFile: "__('dashboard.dictRemoveFile')",
-                dictMaxFilesExceeded: "__('dashboard.dictMaxFilesExceeded')",
+                dictFallbackMessage: " المتصفح الخاص بكم لا يدعم خاصيه تعدد الصوره والسحب والافلات ",
+                dictInvalidFileType: "لايمكنك رفع هذا النوع من الملفات ",
+                dictCancelUpload: "الغاء الرفع ",
+                dictCancelUploadConfirmation: " هل انت متاكد من الغاء رفع الملفات ؟ ",
+                dictRemoveFile: "حذف الصوره",
+                dictMaxFilesExceeded: "لايمكنك رفع عدد اكثر من هضا ",
                 headers: {
                     'X-CSRF-TOKEN':
                         "{{ csrf_token() }}"
